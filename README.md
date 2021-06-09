@@ -1,2 +1,2 @@
-# Particle_Size_Distribution_Curve
+# Particle Size Distribution Curve
 A program that hastens development of particle size distribution curve.
