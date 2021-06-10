@@ -41,3 +41,23 @@ data = {
        }
 df = DataFrame(data)
 ```
+
+This will result into the DataFrame ```df``` as:
+
+|   |opening |mass_retained |
+|---|--------| ------------ |
+|0|4.750|0.0|
+|1|2.000|17.6|
+|2|0.850|56.3|
+|3|0.425|108.2|
+|4|0.250|91.9|
+|5|0.150|94.2|
+|6|0.075|57.6|
+|7|0.000|25.0|
+
+![DataFrame df](https://user-images.githubusercontent.com/53916781/121565707-594c0400-ca3a-11eb-9058-48e8faa2e0cd.png)
+
+
+
+After this, we create a function called ```calculate_percent_finer``` that will calculate the percent finer for each sieve and create a new column in our DataFrame called ```percent_finer```.
+
