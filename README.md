@@ -44,20 +44,44 @@ df = DataFrame(data)
 
 This will result into the DataFrame ```df``` as:
 
-|   |opening |mass_retained |
-|---|--------| ------------ |
-|0|4.750|0.0|
-|1|2.000|17.6|
-|2|0.850|56.3|
-|3|0.425|108.2|
-|4|0.250|91.9|
-|5|0.150|94.2|
-|6|0.075|57.6|
-|7|0.000|25.0|
-
 ![DataFrame df](https://user-images.githubusercontent.com/53916781/121565707-594c0400-ca3a-11eb-9058-48e8faa2e0cd.png)
-
-
 
 After this, we create a function called ```calculate_percent_finer``` that will calculate the percent finer for each sieve and create a new column in our DataFrame called ```percent_finer```.
 
+```python
+def calculate_percent_finer(df):
+     total_mass = df.mass_retained.sum()
+     arr = []
+     for count, sieve in enumerate(df.opening.values):
+         cumulative_mass = sum([df.mass_retained.values[i] for i in range(count + 1)])
+         percent_finer = ((total_mass - cumulative_mass) / total_mass) * 100
+         arr.append(percent_finer)
+     return df.assign(p_finer = arr)
+```     
+
+When this function returns and we print the new DataFrame, it will look like below:
+
+![New DatFrame](https://user-images.githubusercontent.com/53916781/121566080-c5c70300-ca3a-11eb-8cd5-bd815c9081fc.png)
+
+The ```calculate_percent_finer``` function takes in the DataFrame as a single argument and returns a new DataFrame with a ```percent_finer``` column. After this, we proceed to plot the particle size distribution curve.
+
+```python
+import matplotlib.pyplot as plt
+
+df2 = calculate_percent_finer(df)
+
+print (df2) 
+plt.style.use("bmh")
+plt.semilogx(df2.opening, df2.p_finer)
+plt.gca().invert_xaxis()
+plt.xlabel("Grain Size (mm) -- log scale")
+plt.ylabel("Percent Passing")
+plt.title("Particle Size Distribution Curve")
+plt.show()
+```
+
+To plot the grain size distribution curve, we import ```matplotlib.pyplot``` as ```plt``` and use the ```semilogx()``` method to graph a semilog graph. The x-axis is plotted in ascending order by default. So we can use the ```invert_xaxis``` method to reverse the x-axis. Lastly, we add x-axis, y-axis and title labels to the plot and show the graph.
+
+![Particle Size Distribution Curve Plot](https://user-images.githubusercontent.com/53916781/121566831-85b45000-ca3b-11eb-8413-7f580fedc64e.png)
+
+===
