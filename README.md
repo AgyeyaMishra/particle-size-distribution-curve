@@ -80,8 +80,7 @@ plt.title("Particle Size Distribution Curve")
 plt.show()
 ```
 
-To plot the grain size distribution curve, we import ```matplotlib.pyplot``` as ```plt``` and use the ```semilogx()``` method to graph a semilog graph. The x-axis is plotted in ascending order by default. So we can use the ```invert_xaxis``` method to reverse the x-axis. Lastly, we add x-axis, y-axis and title labels to the plot and show the graph.
+To plot the particle size distribution curve, we import ```matplotlib.pyplot``` as ```plt``` and use the ```semilogx()``` method to graph a semilog graph. The x-axis is plotted in ascending order by default. So we can use the ```invert_xaxis``` method to reverse the x-axis. Lastly, we add x-axis, y-axis and title labels to the plot and show the graph.
 
 ![Particle Size Distribution Curve Plot](https://user-images.githubusercontent.com/53916781/121566831-85b45000-ca3b-11eb-8413-7f580fedc64e.png)
-
 ===
