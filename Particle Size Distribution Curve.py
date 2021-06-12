@@ -1,3 +1,10 @@
+"""
+Author: Agyeya Mishra
+Institute: Delhi Technological University (formerly, Delhi College of Engineering)
+Language: Python
+Version: 3.x
+"""
+
 from pandas import DataFrame
 data = {
         "opening": [4.75, 2.00, 0.850, 0.425, 0.250, 0.150, 0.075, 0],
