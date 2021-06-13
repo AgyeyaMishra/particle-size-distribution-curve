@@ -25,7 +25,7 @@ Let’s assume we finished a sieve analysis that has the following results:
 |0.250|91.9|
 |0.150|94.2|
 |0.075|57.6|
-|Pam|25.0|
+|Pan|25.0|
 
 From the sieve analysis, we can determine the percent finer for each sieve, the percentage of the soil passing through the sieve, and plot the grain size distribution curve.
 
