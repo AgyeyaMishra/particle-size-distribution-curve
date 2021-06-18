@@ -1,9 +1,8 @@
-"""
-Author: Agyeya Mishra
-Institute: Delhi Technological University (formerly, Delhi College of Engineering)
-Language: Python
-Version: 3.x
-"""
+# Author: Agyeya Mishra
+# Institute: Delhi Technological University (formerly, Delhi College of Engineering)
+# Language: Python
+# Version: 3.x
+
 
 from pandas import DataFrame
 data = {
