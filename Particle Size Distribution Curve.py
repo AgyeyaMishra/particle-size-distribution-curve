@@ -25,6 +25,8 @@ def calculate_percent_finer(df):
 print(df)     
 print("\n")
 
+# Matplotlib is a plotting library for creating static, animated, and interactive visualizations in Python.
+# Pyplot is a Matplotlib module which provides a MATLAB-like interface.
 import matplotlib.pyplot as plt
 
 df2 = calculate_percent_finer(df)
